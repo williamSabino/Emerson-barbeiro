@@ -1,0 +1,88 @@
+@font-face {
+    font-family: barber-vintage;
+    src: url("/fonts/glimmer\ of\ light.otf");
+}
+
+:root{
+    --font-vintage: barber-vintage;
+    --color-chocolate: rgb(210,105,30);
+}
+
+body{
+    color: white !important;
+    background-color: black;
+    background-image: url("/images/Background-8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main{
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .logo{
+    background-image: url("/images/barberman-skull-vintage-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+   
+}
+
+main h1{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, .7 );
+    font-size: 4rem;
+    font-family: var(--font-vintage);
+    color: var(--color-chocolate);
+}
+
+main h2{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, .7 );
+    position: relative;
+    top: -5rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--color-chocolate);
+    font-family: var(--font-vintage);
+}
+
+main button {
+    position: relative;
+    right: 12px;
+    width: 300px;
+    height: 75px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-vintage);
+    color: white;
+    background-color: var(--color-chocolate);
+}
+
+main button:hover {
+    cursor: pointer;
+}
+
+main .saber_mais{
+    background-image: url("/images/down (1).png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin-top: 10rem;
+}
+
+main .saber_mais:hover{
+    cursor: pointer;
+}
+

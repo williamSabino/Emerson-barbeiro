@@ -1,0 +1,120 @@
+@import url("/css/index.css");
+
+body {
+    overflow-y: auto;
+    background-image: none;
+    height: auto;
+}
+
+section{
+    width: 100vw;
+    height: 300px;
+}
+
+
+
+h2{
+    font-size: 60px;
+    margin-left: 50px;
+    font-family: var(--font-vintage);
+}
+
+/*cabecario*/
+
+.cabecario{
+    background-color: black;
+    height: 500px;
+}
+
+.cabecario h1 {
+    font-family: var(--font-vintage);
+    font-size: 70px;
+    margin-left: 50px;
+}
+
+.cabecario p {
+    color: black;
+    font-size: 40px;
+    margin-left: 50px;
+    background-color: var(--color-chocolate);
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/*service*/
+.servicos{
+    background-color: 	#ffdda6;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    color: black;
+}
+
+.lista_servicos{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.linha_servico{
+    display: flex;
+    text-align: center;
+}
+
+.linha_servico figure figcaption{
+    font-size: 40px;
+}
+
+.linha_servico figure img{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 100%;
+}
+
+/*Data e hora*/
+
+.data_e_hora{
+    background-color: black;
+    height: 500px;
+}
+
+.data_e_hora input[type="date"]{
+    font-size: 50px;
+    width: 50vw;
+    height: 50px;
+}
+
+.data_e_hora input[type="time"]{
+    font-size: 50px;
+    width: 50vw;
+    height: 50px;
+}
+
+
+/*Resumo*/
+.sumario{
+    height: 500px;
+}
+
+.resumo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resumo button[type="button"]{
+    font-family: var(--font-vintage);
+    background-color: var(--color-chocolate);
+    color: white;
+    border-radius: 40px;
+    padding: 20px;
+    width: 400px;
+    height: 170px;
+    font-size: 50px;
+}   
+
+

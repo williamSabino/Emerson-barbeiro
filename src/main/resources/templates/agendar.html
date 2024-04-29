@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/agendar.css">
+    <link rel="stylesheet" href="/css/agendar.css">
+    <link rel="shortcut icon" href="/static/images/barberman-skull-vintage-removebg-preview.png" type="image/x-icon">
+    <title>Emerson Barbeiro</title>
+</head>
+<body>
+    <section class="cabecario">
+        <h1>Bem vindo!</h1>
+        <p>
+            Selecione abaixo o tipo do servico <br>
+            a data e o horario do agendamento, <br>
+            ao finalizar clique em "Agendar". <br>
+        </p>
+    </section>
+    <section class="servicos">
+        <h2>Serviços:</h2>
+        <ul class="lista_servicos">
+            <li class="linha_servico">
+                <figure>
+                    <img src="/images/man-hair.png" alt="">
+                    <figcaption>Degradê</figcaption>
+                </figure>
+            </li>
+            <li class="linha_servico">
+                <figure>
+                    <img src="/images/scissors.png" alt="">
+                    <figcaption>Tesoura</figcaption>
+                </figure>
+            </li>
+            <li class="linha_servico">
+                <figure>
+                    <img src="/images/beard.png" alt="">
+                    <figcaption>Barba</figcaption>
+                </figure>
+            </li>
+            <li class="linha_servico">
+                <figure>
+                    <img src="/images/hairstyle.png" alt="">
+                    <figcaption>Test1</figcaption>
+                </figure>
+            </li>
+            <li class="linha_servico">
+                <figure>
+                    <img src="/images/hairstyle.png" alt="">
+                    <figcaption>Test2</figcaption>
+                </figure>
+            </li>
+            <li class="linha_servico">
+                <figure>
+                    <img src="/images/more.png" alt="">
+                    <figcaption>Outros</figcaption>
+                </figure>
+            </li>
+        </ul>
+    </section>
+
+    <section class="data_e_hora">
+        <h2>Escolha sua data:</h2>
+        <input type="date" name="data" id="data">
+        <h2>Escolha a hora:</h2>
+        <input type="time" name="hora" id="hora">
+    </section>
+
+    <section class="sumario">
+        <h2>Agendamento:</h2>
+        <div class="resumo">
+            <button type="button">Agendar</button>
+        </div>
+    </section>
+
+    <script type="module" src="/static/scripts/agendar.js"></script>
+    <script type="module" src="/scripts/agendar.js"></script>
+</body>
+</html>
