@@ -6,7 +6,7 @@ let listaServicos = document.querySelectorAll(".lista_servicos fieldset input[ty
 
  //formata a data recebida do calendario
  function dataFormat(dataAgora, format){
-     let dataFormatada = format.replace("dd", dataAgora.getDate())
+     let dataFormatada = format.replace("dd", dataAgora.getDate() + 1)
      .replace("mm", dataAgora.getMonth() + 1)
      .replace("yyyy", dataAgora.getFullYear())
      return dataFormatada;
@@ -41,10 +41,9 @@ user.servicos = servicosSelecionados();
         Nome: ${user.nome}"
         Numero: ${user.numero}
         Servico: ${user.servicos}
-        Data: ${user.data}
+        Data: ${dataFormat(new Date(user.data), "dd/mm/yyyy")}
         Hora: ${user.hora}
     }`);
-   // let data = new FormData(formulario);
 });
 
 //retorna uma lista de servicos selecionados pelo usuario
