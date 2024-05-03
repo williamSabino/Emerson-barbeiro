@@ -2,6 +2,7 @@
 
 body {
     overflow-y: auto;
+    overflow-x: hidden;
     background-image: none;
     height: auto;
 }
@@ -54,8 +55,19 @@ h2{
 
 .lista_servicos{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
+}
+
+.lista_servicos fieldset {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lista_servicos fieldset input[type="checkbox"] {
+    width: 0;
+    height: 0;
 }
 
 .linha_servico{
@@ -68,8 +80,8 @@ h2{
 }
 
 .linha_servico figure img{
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     padding: 10px;
     border: 1px black solid;
     border-radius: 100%;
@@ -80,6 +92,10 @@ h2{
 .data_e_hora{
     background-color: black;
     height: 500px;
+}
+
+.container_data_e_hora{
+    margin-left: 50px;
 }
 
 .data_e_hora input[type="date"]{
@@ -106,7 +122,7 @@ h2{
     align-items: center;
 }
 
-.resumo button[type="button"]{
+.resumo input[type="submit"]{
     font-family: var(--font-vintage);
     background-color: var(--color-chocolate);
     color: white;
@@ -116,5 +132,29 @@ h2{
     height: 170px;
     font-size: 50px;
 }   
+
+
+/*Dados*/
+.dados{
+    width: 100vw;
+    height: 600px;
+}
+
+.dados .container_dados label{
+    font-family: var(--font-vintage);
+    font-size: 50px;
+}
+
+.dados .container_dados input{
+    font-size: 50px;
+    width: 70vw;
+}
+
+.container_dados{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 
 

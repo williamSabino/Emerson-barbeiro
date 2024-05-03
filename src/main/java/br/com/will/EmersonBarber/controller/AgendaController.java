@@ -1,9 +1,12 @@
 package br.com.will.EmersonBarber.controller;
 
+import br.com.will.EmersonBarber.dto.AgendaDto;
 import br.com.will.EmersonBarber.service.AgendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,5 +18,11 @@ public class AgendaController {
     @GetMapping
     public String agendar(){
         return "agendar";
+    }
+
+    @PostMapping(consumes = "application/x-www-form-urlencoded")
+    public String agendar(AgendaDto agendaDto){
+        System.out.println(agendaDto.toString());
+        return "index";
     }
 }

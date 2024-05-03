@@ -11,4 +11,5 @@ public class BarbeariaController {
     public String home(){
         return "index";
     }
+
 }
