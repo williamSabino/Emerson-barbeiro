@@ -1,7 +1,7 @@
 package br.com.will.EmersonBarber.service;
 
 import br.com.will.EmersonBarber.dto.GerarDatasDto;
-import br.com.will.EmersonBarber.models.Horario;
+import br.com.will.EmersonBarber.models.horario.Horario;
 import br.com.will.EmersonBarber.repository.HorariosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -83,11 +83,13 @@
 
         <section class="data_e_hora">
             <h2>Escolha sua data:</h2>
-           <div class="container_data_e_hora">
-            <input type="date" name="data" id="data">
+            <select name="data" id="data">
+                <option th:each="data:${datas}" th:value="${data}" th:text="${data}"></option>
+            </select>
+
             <h2>Escolha a hora:</h2>
-            <input type="time" name="hora" id="hora">
-           </div>
+            
+
         </section>
 
         <section class="dados">

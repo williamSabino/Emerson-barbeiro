@@ -6,11 +6,11 @@ let listaServicos = document.querySelectorAll(".lista_servicos fieldset input[ty
 
  //formata a data recebida do calendario
  function dataFormat(dataAgora, format){
-     let dataFormatada = format.replace("dd", dataAgora.getDate() + 1)
-     .replace("mm", dataAgora.getMonth() + 1)
-     .replace("yyyy", dataAgora.getFullYear())
-     return dataFormatada;
-    }
+    let dataFormatada = format.replace("dd", dataAgora.getDate() + 1)
+    .replace("mm", dataAgora.getMonth() + 1)
+    .replace("yyyy", dataAgora.getFullYear())
+    return dataFormatada;
+   }
 
 //verifica o click no serviço
 //e pinta o background ou tira a tinta do background
@@ -46,6 +46,9 @@ user.servicos = servicosSelecionados();
     }`);
 });
 
+
+//funcoes
+
 //retorna uma lista de servicos selecionados pelo usuario
 function servicosSelecionados(){
     let servicos = [];
@@ -55,4 +58,5 @@ function servicosSelecionados(){
         }
     }
     return servicos;
-}
+}   
+

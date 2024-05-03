@@ -1,4 +1,4 @@
-package br.com.will.EmersonBarber.models;
+package br.com.will.EmersonBarber.models.horario;
 
 import br.com.will.EmersonBarber.dto.HorariosDto;
 import jakarta.persistence.*;
