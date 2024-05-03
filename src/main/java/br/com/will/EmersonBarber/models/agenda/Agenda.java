@@ -1,6 +1,6 @@
-package br.com.will.EmersonBarber.models;
+package br.com.will.EmersonBarber.models.agenda;
 
-import br.com.will.EmersonBarber.models.agenda.TipoDeCorte;
+import br.com.will.EmersonBarber.models.servicos.Servicos;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +22,6 @@ public class Agenda {
     private String nome;
     private LocalDate dataDoCorte;
     private LocalTime horario;
-    @Enumerated(EnumType.STRING)
-    private TipoDeCorte tipoDeCorte;
+    @Embedded
+    private Servicos servicos;
 }

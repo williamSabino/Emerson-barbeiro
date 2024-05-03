@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class GerarDatas {
     //gera datas baseado na data inicial e final informada pelo adm
-    public void gerarDatas(String dateInicial, String dateFinal){
+    public List<HorariosDto> gerarDatas(String dateInicial, String dateFinal){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         var dateHoje = LocalDate.parse(dateInicial, formatter);
         var dataUmMes = LocalDate.parse(dateFinal, formatter);
@@ -35,6 +35,6 @@ public class GerarDatas {
             }
             dateHoje = dateHoje.plusDays(1);
         }
-        horarios.forEach(System.out::println);
+        return horarios;
     }
 }
