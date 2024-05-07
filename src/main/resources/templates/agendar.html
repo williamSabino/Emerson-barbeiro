@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/static/css/agendar.css">
     <link rel="stylesheet" href="/css/agendar.css">
-    <link rel="shortcut icon" href="/static/images/barberman-skull-vintage-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/barberman-skull-vintage-removebg-preview.png" type="image/x-icon">
     <title>Emerson Barbeiro</title>
 </head>
 
@@ -81,14 +80,19 @@
             </ul>
         </section>
 
-        <section class="data_e_hora">
+        <section class="data_e_hora" data-th-attr= "data-text=${horarios}">
             <h2>Escolha sua data:</h2>
+           <div class="teste">
             <select name="data" id="data">
+                <option value="Selecione uma Data">Selecione uma Data</option>
                 <option th:each="data:${datas}" th:value="${data}" th:text="${data}"></option>
             </select>
 
             <h2>Escolha a hora:</h2>
-            
+            <select name="hora" id="hora">
+                <option value="Selecione um Horario">Selecione um Horario</option>
+            </select>
+           </div>
 
         </section>
 
@@ -110,9 +114,8 @@
         </section>
 
     </form>
-
-    <script type="module" src="/static/scripts/agendar.js"></script>
     <script type="module" src="/scripts/agendar.js"></script>
+    <script type="module" src="/scripts/horarios.js"></script>
 </body>
 
 </html>

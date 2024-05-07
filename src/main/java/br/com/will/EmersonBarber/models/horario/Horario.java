@@ -29,4 +29,12 @@ public class Horario {
         this.agendado = false;
         this.nome = h.nome() != null ? h.nome() : "";
     }
+
+    public boolean isAgendado() {
+        return agendado;
+    }
+
+    public void setAgendado(boolean agendado) {
+        this.agendado = agendado;
+    }
 }
