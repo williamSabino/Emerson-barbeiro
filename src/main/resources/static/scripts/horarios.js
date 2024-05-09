@@ -16,7 +16,7 @@ selectData.addEventListener("change", (event) => {
 
 function criarLinhaData(listaData){
     lista = [];
-    selectHora.innerHTML = `"<option value="Selecione um Horario">Selecione um Horario</option>"`;
+    selectHora.innerHTML = `"<option value="Selecione um Horario" disabled selected>Selecione um Horario</option>"`;
     listaData.forEach(element => {
         selectHora.innerHTML += `
         <option value="${element}">${element}</option>`;

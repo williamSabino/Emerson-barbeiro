@@ -80,19 +80,18 @@
             </ul>
         </section>
 
-        <section class="data_e_hora" data-th-attr= "data-text=${horarios}">
+        <section class="data_e_hora" data-th-attr="data-text=${horarios}">
             <h2>Escolha sua data:</h2>
-           <div class="teste">
-            <select name="data" id="data">
-                <option value="Selecione uma Data">Selecione uma Data</option>
-                <option th:each="data:${datas}" th:value="${data}" th:text="${data}"></option>
-            </select>
+            <div class="teste">
+                <select name="data" id="data">
+                    <option value="Selecione uma Data" disabled selected >Selecione uma Data</option>
+                    <option th:each="data:${datas}" th:value="${data}" th:text="${data}"></option>
+                </select>
 
-            <h2>Escolha a hora:</h2>
-            <select name="hora" id="hora">
-                
-            </select>
-           </div>
+                <h2>Escolha a hora:</h2>
+                <select name="hora" id="hora">
+                </select>
+            </div>
 
         </section>
 

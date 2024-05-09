@@ -96,22 +96,25 @@ h2{
     margin-left: 50px;
 }
 
-.data_e_hora input[type="date"]{
-    font-size: 50px;
-    width: 50vw;
-    height: 50px;
+.data_e_hora select{
+    margin-left: 50px;
+    font-size: 1rem;
+    width: 70vw;
+    height: 70px;
 }
 
-.data_e_hora input[type="time"]{
-    font-size: 50px;
-    width: 50vw;
-    height: 50px;
+.data_e_hora select:first-child{
+    font-size: 2rem;
 }
 
+#hora{
+    font-size: 2rem;
+}
 
 /*Resumo*/
 .sumario{
     height: 500px;
+    margin-top: 50px;
 }
 
 .resumo{
@@ -128,7 +131,7 @@ h2{
     padding: 20px;
     width: 400px;
     height: 170px;
-    font-size: 50px;
+    font-size: 2rem;
 }   
 
 
