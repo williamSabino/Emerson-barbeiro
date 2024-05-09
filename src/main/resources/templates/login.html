@@ -1,28 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/login.css">
     <link rel="shortcut icon" href="/images/barberman-skull-vintage-removebg-preview.png" type="image/x-icon">
     <title>Emerson Barbeiro - Login</title>
 </head>
+
 <body>
     <main>
-        <form method="POST" class="formLogin">
-            <h1>Tela de Login</h1>
-            <p>Digite os seus dados de acesso no campo abaixo.</p>
+        <section class="login">
+            <form method="POST" class="formLogin" action="/emerson-barbeiro/login">
+                <h1>Tela de Login</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
 
-            <label for="email">E-mail:</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+                <label for="email">E-mail:</label>
+                <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
 
-            <label for="password">Senha:</label>
-            <input type="password" placeholder="Digite sua senha" />
+                <label for="password">Senha:</label>
+                <input type="password" placeholder="Digite sua senha" />
 
-            <a href="/">Esqueci minha senha</a>
-            <input type="submit" value="Acessar" class="btn" />
-        </form>
+                <a href="/">Esqueci minha senha</a>
+                <p>Não tem conta? <a id="criar_conta">Clique aqui!</a></p>
+                <input type="submit" value="Acessar" class="btn" />
+            </form>
+        </section>
+
+        <section class="sign">
+            <form method="POST" class="formLogin criar_conta" action="/emerson-barbeiro/criar-conta">
+                <h1>Tela de Login</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+
+                <label for="nome">Nome:</label>
+                <input type="nome" placeholder="Digite seu nome" autofocus="true"/>
+
+                <label for="email">E-mail:</label>
+                <input type="email" placeholder="Digite seu e-mail"/>
+
+                <label for="password">Senha:</label>
+                <input type="password" placeholder="Digite sua senha"/>
+
+                <p>Já tem conta? <a id="login">Clique aqui!</a></p>
+                <input type="submit" value="Cadastrar" class="btn" />
+            </form>
+        </section>
 
     </main>
-
+<script type="module" src="/scripts/login.js"></script>
 </body>
+
 </html>

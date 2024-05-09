@@ -84,7 +84,7 @@
             <h2>Escolha sua data:</h2>
             <div class="teste">
                 <select name="data" id="data">
-                    <option value="Selecione uma Data" disabled selected >Selecione uma Data</option>
+                    <option value="Selecione uma Data" disabled selected>Selecione uma Data</option>
                     <option th:each="data:${datas}" th:value="${data}" th:text="${data}"></option>
                 </select>
 
@@ -107,11 +107,8 @@
         </section>
 
         <section class="sumario">
-            <div class="resumo">
                 <input type="submit" value="Agendar">
-            </div>
         </section>
-
     </form>
     <script type="module" src="/scripts/agendar.js"></script>
     <script type="module" src="/scripts/horarios.js"></script>

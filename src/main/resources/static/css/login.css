@@ -30,6 +30,10 @@ main{
     margin: 50px 0;
 }
 
+.formLogin a:hover{
+    cursor: pointer;
+}
+
 .formLogin label {
     font-size: 4rem;
 }
@@ -44,14 +48,16 @@ main{
 }
 
 .formLogin input[type="submit"]{
-    position: relative;
-    left: 120px;
     font-family: var(--font-vintage);
     background-color: var(--color-chocolate);
     color: white;
     border-radius: 40px;
     padding: 20px;
-    width: 400px;
-    height: 170px;
+    height: 120px;
     font-size: 2rem;
+}
+
+/*sign*/
+.sign{
+    display: none;
 }

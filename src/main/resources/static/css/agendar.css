@@ -115,22 +115,17 @@ h2{
 .sumario{
     height: 500px;
     margin-top: 50px;
+    text-align: center;
 }
 
-.resumo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.resumo input[type="submit"]{
+input[type="submit"]{
     font-family: var(--font-vintage);
     background-color: var(--color-chocolate);
     color: white;
     border-radius: 40px;
     padding: 20px;
-    width: 400px;
-    height: 170px;
+    width: 70vw;
+    height: 120px;
     font-size: 2rem;
 }   
 
