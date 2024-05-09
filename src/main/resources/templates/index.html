@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <main>
         <h1>Emerson Barbeiro</h1>
         <div class="logo"></div>
@@ -17,8 +18,11 @@
         <a th:href="@{/emerson-barbeiro/agenda}">
             <button>Agendar</button>
         </a>
+        <a th:href="@{/emerson-barbeiro/agenda}">
+            <button>Login</button>
+        </a>
         <div class="saber_mais"></div>
-        
+
         <form action="/emerson-barbeiro/gerar-datas" method="post">
             <label for="dataInicial">inicial</label>
             <input type="text" name="dataInicial" id="dataInicial">

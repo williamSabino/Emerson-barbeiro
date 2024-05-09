@@ -8,13 +8,11 @@ import br.com.will.EmersonBarber.repository.AgendaRepository;
 import br.com.will.EmersonBarber.repository.HorariosRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Optional;
 
 @Service

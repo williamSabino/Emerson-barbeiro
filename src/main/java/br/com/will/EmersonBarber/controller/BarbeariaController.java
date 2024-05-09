@@ -20,6 +20,9 @@ public class BarbeariaController {
         return "index";
     }
 
+    @GetMapping("/login")
+    public String login(){ return "login"; }
+
     @PostMapping(path = "/gerar-datas", consumes = "application/x-www-form-urlencoded")
     public String gerarDatas(GerarDatasDto gerarDatasDto){
         return service.gerarData(gerarDatasDto);

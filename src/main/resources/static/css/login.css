@@ -1,0 +1,47 @@
+@import url("/css/index.css");
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: column;
+}
+
+.formLogin h1{
+    font-family: var(--font-vintage);
+    text-align: center;
+}
+
+.formLogin p {
+    font-size: 2rem;
+}
+
+.formLogin a {
+    color: var(--color-chocolate);
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.formLogin label {
+    font-size: 4rem;
+}
+
+.formLogin input {
+    height: 70px;
+    font-size: 2rem;
+}
+
+.formLogin input::placeholder{
+    font-size: 2rem;
+}
+
+.formLogin input[type="submit"]{
+    font-size: 2rem;
+    font-family: var(--font-vintage);
+    background-color: var(--color-chocolate);
+    color: white;
+}
