@@ -2,6 +2,10 @@
 
 body{
     background-size: cover;
+    padding-top: 20rem;
+    background-image: url("/images/Background-8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 main{

@@ -1,0 +1,27 @@
+@import url("/css/index.css");
+
+.info {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 100vw;
+    height: 30vh;
+    background-color: chocolate;
+    color: white;
+}
+
+.info h2 {
+    font-family: var(--font-vintage);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.info_dev{
+    text-align: start;
+    margin-top: 200px;
+}

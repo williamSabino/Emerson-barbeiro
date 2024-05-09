@@ -5,35 +5,68 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/apresentacao.css">
+    <link rel="stylesheet" href="css/info.css">
     <link rel="shortcut icon" href="/images/barberman-skull-vintage-removebg-preview.png" type="image/x-icon">
     <title>Emerson Barbeiro</title>
 </head>
 
 <body>
 
-    <main>
-        <h1>Emerson Barbeiro</h1>
-        <div class="logo"></div>
-        <h2>Estilo e Elegância</h2>
-        <a th:href="@{/emerson-barbeiro/agenda}">
-            <button>Agendar</button>
-        </a>
-        <a th:href="@{/emerson-barbeiro/login}">
-            <button>Login</button>
-        </a>
-        <div class="saber_mais"></div>
+    <section class="inicial">
+        <main>
+            <h1>Emerson Barbeiro</h1>
+            <div class="logo"></div>
+            <h2>Estilo e Elegância</h2>
+            <a th:href="@{/emerson-barbeiro/agenda}">
+                <button>Agendar</button>
+            </a>
+            <a th:href="@{/emerson-barbeiro/login}">
+                <button>Login</button>
+            </a>
+            <div class="saber_mais"></div>
 
-        <!--
-        <form action="/emerson-barbeiro/gerar-datas" method="post">
-            <label for="dataInicial">inicial</label>
-            <input type="text" name="dataInicial" id="dataInicial">
-            <br>
-            <label for="dataFinal">final</label>
-            <input type="text" name="dataFinal" id="dataFinal">
-            <input type="submit" value="Gerar">
-        </form>
-        -->
-    </main>
+            <!--
+            <form action="/emerson-barbeiro/gerar-datas" method="post">
+                <label for="dataInicial">inicial</label>
+                <input type="text" name="dataInicial" id="dataInicial">
+                <br>
+                <label for="dataFinal">final</label>
+                <input type="text" name="dataFinal" id="dataFinal">
+                <input type="submit" value="Gerar">
+            </form>
+            -->
+        </main>
+    </section>
+
+    <section class="apresentacao" id="apresentacao">
+        <h2>Seja bem-vindo à <br> minha Barbearia</h2>
+        <p>Descubra a excelência em cuidados masculinos na Emerson Barbearia. Combinando tradição e inovação, oferecemos
+            cortes de cabelo de alta qualidade em um ambiente acolhedor.</p>
+
+        <video autoplay muted>
+            <source src="/video/Video.Guru_20240509_114943483.mp4" type="video/mp4">
+        </video>
+
+        <p>Para saber mais, siga minhas redes sociais</p>
+    </section>
+
+    <section class="info" id="info">
+        <h2>Contatos</h2>
+        <div class="icons">
+            <span id="instagram">
+                <img src="/images/instagram.png" alt="Inst">
+            </span>
+            <span id="whatsapp">
+                <img src="/images/whatsapp.png" alt="whats">
+            </span>
+        </div>
+
+        <div class="info_dev">
+            <p>Site criado por : william Sabino</p>
+            <p>Entrar em contato <a href="">Clique aqui!</a></p>
+        </div>
+    </section>
 
 
 
