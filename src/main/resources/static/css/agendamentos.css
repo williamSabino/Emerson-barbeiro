@@ -1,0 +1,32 @@
+@import url("/css/index.css");
+
+.inicial h1{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, .7 );
+    font-size: 4rem;
+    font-family: var(--font-vintage);
+    color: var(--color-chocolate);
+}
+
+.inicial > p {
+    font-size: 3rem;
+    font-family: var(--font-vintage);
+    color: var(--color-chocolate);
+}
+
+.inicial input[type="date"] {
+    
+}
+
+.horarios_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.horario p {
+    width: auto;
+    font-size: 1.4rem;
+}

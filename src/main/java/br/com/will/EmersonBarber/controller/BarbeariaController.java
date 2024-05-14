@@ -14,7 +14,6 @@ public class BarbeariaController {
     @Autowired
     private BarbeariaService service;
 
-
     @GetMapping
     public String home(){
         return "index";
@@ -22,6 +21,9 @@ public class BarbeariaController {
 
     @GetMapping("/login")
     public String login(){ return "login"; }
+
+    @PostMapping("/login")
+    public  String loginEntrar(){ return "agendamentos"; }
 
     @PostMapping(path = "/gerar-datas", consumes = "application/x-www-form-urlencoded")
     public String gerarDatas(GerarDatasDto gerarDatasDto){
