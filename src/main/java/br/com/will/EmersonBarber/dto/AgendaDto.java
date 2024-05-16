@@ -1,5 +1,7 @@
 package br.com.will.EmersonBarber.dto;
 
+import br.com.will.EmersonBarber.models.agenda.Agenda;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 

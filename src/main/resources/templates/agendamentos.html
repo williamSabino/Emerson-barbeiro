@@ -9,48 +9,19 @@
 
 <body>
     <section class="inicial">
-        <h1>Agendamentos : </h1>
+        <h1>Agendamentos</h1>
+        <p>Filtro de Data:</p>
+        <div class="filtros">
+            <input type="date" name="inicial" id="dataInicial">
+            <p>à</p>
+            <input type="date" name="final" id="dataFinal">
+        </div>
 
-        <p>Filtro: </p>
-        <input type="date" name="data" id="dataFiltro">
-
-        <div class="horarios_container">
-            <div class="horario">
-                <p>Data: 01-01-2024</p>
-                <p>Hora: 10:00</p>
-                <p>Nome: William</p>
-                <p>Serviços: Barba,Tesoura</p>
-                <p>Telefone: 81982748007</p>
-                <span class="">
-                    <button type="button">Edit</button>
-                    <button type="button">Del</button>
-                </span>
-            </div>
-            <div class="horario">
-                <p>Data: 01-01-2024</p>
-                <p>Hora: 10:00</p>
-                <p>Nome: William</p>
-                <p>Serviços: Barba,Tesoura</p>
-                <p>Telefone: 81982748007</p>
-                <span class="">
-                    <button type="button">Edit</button>
-                    <button type="button">Del</button>
-                </span>
-            </div>
-            <div class="horario">
-                <p>Data: 01-01-2024</p>
-                <p>Hora: 10:00</p>
-                <p>Nome: William</p>
-                <p>Serviços: Barba,Tesoura</p>
-                <p>Telefone: 81982748007</p>
-                <span class="">
-                    <button type="button">Edit</button>
-                    <button type="button">Del</button>
-                </span>
-            </div>
+        <div class="horarios_container" data-th-attr= "data-agendamentos=${agendamentos}">
         </div>
 
     </section>
+    <script type="module" src="/scripts/agendamentos.js"></script>
 </body>
 
 </html>
