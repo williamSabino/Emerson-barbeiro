@@ -13,6 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
+import java.util.Objects;
+
+import static java.util.stream.Collectors.toList;
+
 @Service
 public class BarbeariaService {
     @Autowired
@@ -26,7 +30,15 @@ public class BarbeariaService {
     public String gerarData(GerarDatasDto gerarDatasDto) {
         var horariosDto = gerarDatas.gerarDatas(gerarDatasDto.dataInicial(), gerarDatasDto.dataFinal());
         var horarios = horariosDto.stream()
-                .map(Horario::new).toList();
+                .map(Horario::new)
+                .map(h -> {
+                    if (!horariosRepository.existsHorarioByData(h.getData())) {
+                        return h;
+                    }else {
+                        return null;
+                    }
+                })
+                .filter(Objects::nonNull).toList();
         horariosRepository.saveAll(horarios);
         return "index";
     }

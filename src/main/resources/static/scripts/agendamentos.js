@@ -8,7 +8,7 @@ let agendamentosLista = JSON.parse(agendamentos);
 for (let item of agendamentosLista) {
     let linha = `
     <div class="horario">
-    <p>Data: ${item.data}</p>
+    <p class="horario_data">Data: ${item.data}</p>
     <p>Hora: ${item.hora}</p>
     <p>Nome: ${item.nome}</p>
     <p>Serviços: Barba,Tesoura</p>

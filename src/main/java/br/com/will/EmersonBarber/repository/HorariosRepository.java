@@ -19,4 +19,6 @@ public interface HorariosRepository extends JpaRepository<Horario, Long> {
     List<Horario> listarHorariosDisponiveis(LocalDate dataHoje);
 
     Optional<Horario> findByDataAndHora(LocalDate dataDoCorte, LocalTime horario);
+
+    boolean existsHorarioByData(LocalDate data);
 }

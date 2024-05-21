@@ -17,9 +17,20 @@
             <input type="date" name="final" id="dataFinal">
         </div>
 
-        <div class="horarios_container" data-th-attr= "data-agendamentos=${agendamentos}">
+        <div class="horarios_container" data-th-attr="data-agendamentos=${agendamentos}">
         </div>
+    </section>
 
+    <section class="gerar">
+        <h1>Gerar Datas</h1>
+        <p>Selecione um periodo :</p>
+        <form action="/emerson-barbeiro/gerar-datas" method="post">
+            <div class="container_inputs">
+                <input type="text" name="dataInicial" id="dataInicial">
+                <input type="text" name="dataFinal" id="dataFinal">
+            </div>
+            <input type="submit" value="Gerar">
+        </form>
     </section>
     <script type="module" src="/scripts/agendamentos.js"></script>
 </body>

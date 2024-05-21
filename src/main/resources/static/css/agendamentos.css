@@ -1,6 +1,7 @@
 @import url("/css/index.css");
 
-.inicial h1 {
+.inicial h1,
+.gerar h1 {
     padding: 10px;
     border: none;
     border-radius: 10px;
@@ -10,7 +11,8 @@
     color: var(--color-chocolate);
 }
 
-.inicial>p {
+.inicial>p,
+.gerar>p {
     font-size: 3rem;
     font-family: var(--font-vintage);
     color: var(--color-chocolate);
@@ -39,18 +41,20 @@
 /*horarios*/
 
 .horarios_container {
-    display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
 }
 
 .horario {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     min-width: 400px;
-    flex: 1;
+    height: 150px;
 }
 
+
 .horario p {
+    flex: content;
     width: auto;
     font-size: 2rem;
 }
@@ -67,5 +71,48 @@
     background-color: var(--color-chocolate);
     color: white;
     height: 70px;
-    font-size: 1.4rem;
+    font-size: 2rem;
+}
+
+
+/*Gerar datas*/
+.gerar {
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.gerar form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gerar form .container_inputs {
+    display: flex;
+    align-items: center;
+}
+
+.container_inputs{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gerar form .container_inputs input {
+    width: 45vw;
+    height: 70px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.gerar form input[type="submit"] {
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-chocolate);
+    color: white;
+    height: 70px;
+    width: 60vw;
+    text-align: center;
+    font-size: 2rem;
 }
