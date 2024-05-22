@@ -24,7 +24,7 @@ public class Horario {
     private String nome;
 
     public Horario(HorariosDto h) {
-        this.data = LocalDate.parse(h.data(), DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        this.data = LocalDate.parse(h.data(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         this.hora = h.Hora();
         this.agendado = false;
         this.nome = h.nome() != null ? h.nome() : "";

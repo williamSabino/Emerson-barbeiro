@@ -7,7 +7,7 @@ let lista = [];
 
 selectData.addEventListener("change", (event) => {
     for(let item of horarios){
-        if(event.target.value == item.data && item.agendado == false){
+        if(selectData.value == item.data && item.agendado == false){
             lista.push(item.hora);
         }
     }

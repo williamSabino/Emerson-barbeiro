@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 @Service
@@ -33,6 +34,10 @@ public class AgendaService {
                 .map(HorariosDtoJson::new).toList();
 
         var horariosJson = mapper.writeValueAsString(listaDto);
+
+        //testes
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        System.out.println(horariosJson);
 
         model.addAttribute("datas", datas);
         model.addAttribute("horarios", horariosJson);

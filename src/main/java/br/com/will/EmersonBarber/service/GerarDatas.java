@@ -14,7 +14,9 @@ import java.util.List;
 public class GerarDatas {
     //gera datas baseado na data inicial e final informada pelo adm
     public List<HorariosDto> gerarDatas(String dateInicial, String dateFinal){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        System.out.println(dateInicial);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
         var dateHoje = LocalDate.parse(dateInicial, formatter);
         var dataUmMes = LocalDate.parse(dateFinal, formatter);
 
