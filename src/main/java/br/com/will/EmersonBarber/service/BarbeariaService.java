@@ -48,7 +48,7 @@ public class BarbeariaService {
         var listaDto = horarios.stream()
                         .map(h -> new AgendamentosDto(
                                 h.getNome(),
-                                null,
+                                h.getNumero(),
                                 h.isDegrade(),
                                 h.isTesoura(),
                                 h.isBarba(),

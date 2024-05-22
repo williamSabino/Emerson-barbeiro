@@ -11,8 +11,8 @@ for (let item of agendamentosLista) {
     <p class="horario_data">Data: <br> ${item.data}</p>
     <p>Hora: ${item.hora}</p>
     <p>Nome: <br> ${item.nome}</p>
-    <p>Serviços: <br> Barba,Tesoura</p>
-    <p>Telefone: 81982748007</p>
+    <p>Serviços: <br> ${servicos(item)} </p>
+    <p>Telefone: ${item.numero == null ? "" : item.numero}</p>
     <span class="container_btn">
         <a href="#"><img src="/images/editt.png" alt="no" class="btn_edit"></img></a>
         <a href="#"><img src="/images/delete.png" alt="no" class="btn_delete"></img></a>
@@ -20,6 +20,16 @@ for (let item of agendamentosLista) {
 </div>
     `;
     container.innerHTML += linha;
+}
+
+function servicos(agendamento){
+    let servicos = [];
+    for (const [key, value] of Object.entries(agendamento)){
+        if(value === true){
+            servicos.push(key);
+        }
+    }
+    return servicos;
 }
 
 

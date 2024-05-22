@@ -21,6 +21,7 @@ public class Agenda {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    private String numero;
     private LocalDate data;
     private LocalTime hora;
     private boolean degrade;
@@ -32,6 +33,7 @@ public class Agenda {
 
     public Agenda(AgendaDto agendaDto) {
         this.nome = agendaDto.nome();
+        this.numero = agendaDto.numero();
         this.data = agendaDto.data();
         this.hora = agendaDto.hora();
         this.tesoura = Objects.equals(agendaDto.tesoura(), "on");

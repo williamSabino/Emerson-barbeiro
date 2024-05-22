@@ -53,19 +53,24 @@
     background-color: var(--color-chocolate);
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-top: 10px;
     min-width: 400px;
-    height: 150px;
+    height: 200px;
 }
 
 
 .horario p {
-    flex: content;
-    width: auto;
+    margin: 0;
+    flex: 1;
+    min-width: 110px;
     font-size: 2rem;
 }
 
+.horario p:nth-child(1){
+    min-width: 150px;
+    margin-right: 20px;
+}
 
 .container_btn {
     display: flex;
@@ -96,7 +101,6 @@
     width: 70px;
     height: 70px;
 }
-
 
 /*Gerar datas*/
 .gerar {

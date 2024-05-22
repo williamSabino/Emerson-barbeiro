@@ -35,10 +35,6 @@ public class AgendaService {
 
         var horariosJson = mapper.writeValueAsString(listaDto);
 
-        //testes
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        System.out.println(horariosJson);
-
         model.addAttribute("datas", datas);
         model.addAttribute("horarios", horariosJson);
 
