@@ -40,22 +40,37 @@ public class BarbeariaService {
     }
 
     public String quadroHorarios(ModelMap modelMap) throws JsonProcessingException {
-        var horarios = agendaRepository.findAll();
-        var listaDto = horarios.stream()
-                        .map(h -> new AgendamentosDto(
-                                h.getNome(),
-                                h.getNumero(),
-                                h.isDegrade(),
-                                h.isTesoura(),
-                                h.isBarba(),
-                                h.isTest1(),
-                                h.isTest2(),
-                                h.isOutros(),
-                                h.getData().toString(),
-                                h.getHora().toString()
-                        )).toList();
-        var json = mapper.writeValueAsString(listaDto);
+        var json = itemsAgendamento();
         modelMap.addAttribute("agendamentos", json);
         return "agendamentos";
+    }
+
+    public String deletar(Long id, ModelMap modelMap) throws JsonProcessingException {
+        var agendamento = agendaRepository.getReferenceById(id);
+        var horario = horariosRepository.findByDataAndHora(agendamento.getData(), agendamento.getHora());
+        horario.get().setAgendado(false);
+        agendaRepository.deleteById(id);
+        var json = itemsAgendamento();
+        modelMap.addAttribute("agendamentos", json);
+        return "agendamentos";
+    }
+
+    private String itemsAgendamento() throws JsonProcessingException {
+        var horarios = agendaRepository.findAll();
+        var listaDto = horarios.stream()
+                .map(h -> new AgendamentosDto(
+                        h.getId(),
+                        h.getNome(),
+                        h.getNumero(),
+                        h.isDegrade(),
+                        h.isTesoura(),
+                        h.isBarba(),
+                        h.isTest1(),
+                        h.isTest2(),
+                        h.isOutros(),
+                        h.getData().toString(),
+                        h.getHora().toString()
+                )).toList();
+        return mapper.writeValueAsString(listaDto);
     }
 }
