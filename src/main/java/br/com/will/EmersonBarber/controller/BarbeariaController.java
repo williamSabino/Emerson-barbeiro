@@ -1,7 +1,7 @@
 package br.com.will.EmersonBarber.controller;
 
-import br.com.will.EmersonBarber.dto.AgendaDto;
 import br.com.will.EmersonBarber.dto.GerarDatasDto;
+import br.com.will.EmersonBarber.dto.UsuarioDto;
 import br.com.will.EmersonBarber.service.BarbeariaService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.transaction.Transactional;
@@ -27,9 +27,10 @@ public class BarbeariaController {
     @GetMapping("/login")
     public String login(){ return "login"; }
 
-    @PostMapping("/login")
-    public  String loginEntrar(ModelMap modelMap) throws JsonProcessingException {
-        return service.quadroHorarios(modelMap);
+
+    @PostMapping(path = "/login", consumes = "application/x-www-form-urlencoded")
+    public  String loginEntrar(UsuarioDto usuarioDto, ModelMap modelMap) throws JsonProcessingException {
+        return service.login(usuarioDto, modelMap);
     }
 
     @PostMapping(path = "/gerar-datas", consumes = "application/x-www-form-urlencoded")
@@ -42,5 +43,4 @@ public class BarbeariaController {
     public String deletar(@PathVariable Long id, ModelMap modelMap) throws JsonProcessingException {
         return service.deletar(id, modelMap);
     }
-
 }

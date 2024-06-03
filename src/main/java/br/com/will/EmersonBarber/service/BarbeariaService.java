@@ -2,12 +2,15 @@ package br.com.will.EmersonBarber.service;
 
 import br.com.will.EmersonBarber.dto.AgendamentosDto;
 import br.com.will.EmersonBarber.dto.GerarDatasDto;
+import br.com.will.EmersonBarber.dto.UsuarioDto;
 import br.com.will.EmersonBarber.models.horario.Horario;
 import br.com.will.EmersonBarber.repository.AgendaRepository;
 import br.com.will.EmersonBarber.repository.HorariosRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
@@ -21,6 +24,8 @@ public class BarbeariaService {
     private HorariosRepository horariosRepository;
     @Autowired
     private AgendaRepository agendaRepository;
+    @Autowired
+    private AuthenticationManager authenticationManager;
      JsonMapper mapper = new JsonMapper();
 
     public String gerarData(GerarDatasDto gerarDatasDto) {
@@ -39,7 +44,9 @@ public class BarbeariaService {
         return "index";
     }
 
-    public String quadroHorarios(ModelMap modelMap) throws JsonProcessingException {
+    public String login(UsuarioDto usuarioDto, ModelMap modelMap) throws JsonProcessingException {
+        var token = new UsernamePasswordAuthenticationToken(usuarioDto.email(), usuarioDto.senha());
+        var auth = authenticationManager.authenticate(token);
         var json = itemsAgendamento();
         modelMap.addAttribute("agendamentos", json);
         return "agendamentos";

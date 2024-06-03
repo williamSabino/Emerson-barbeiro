@@ -1,6 +1,5 @@
 package br.com.will.EmersonBarber.repository;
 
-import br.com.will.EmersonBarber.models.agenda.Agenda;
 import br.com.will.EmersonBarber.models.horario.Horario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
