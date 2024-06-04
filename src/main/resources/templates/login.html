@@ -14,12 +14,12 @@
             <form method="POST" class="formLogin" action="/emerson-barbeiro/login">
                 <h1>Tela de Login</h1>
                 <p>Digite os seus dados de acesso no campo abaixo.</p>
-
+                <p id="error_message">E-mail ou senha invalidos !</p>
                 <label for="email">E-mail:</label>
-                <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
 
                 <label for="password">Senha:</label>
-                <input type="password" placeholder="Digite sua senha" />
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" />
 
                 <a href="/">Esqueci minha senha</a>
                 <p>Não tem conta? <a id="criar_conta">Clique aqui!</a></p>

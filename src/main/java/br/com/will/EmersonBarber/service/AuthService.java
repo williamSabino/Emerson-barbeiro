@@ -12,7 +12,11 @@ public class AuthService implements UserDetailsService {
     @Autowired
     private UsuarioRepository repository;
     @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        return repository.findByEmail(email);
+    public UserDetails loadUserByUsername(String email){
+        try{
+            return repository.findByEmail(email);
+        } catch (RuntimeException exception){
+            throw new RuntimeException("Usuario Não Encontrado !!");
+        }
     }
 }

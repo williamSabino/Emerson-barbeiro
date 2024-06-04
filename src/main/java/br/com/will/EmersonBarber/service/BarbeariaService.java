@@ -46,12 +46,12 @@ public class BarbeariaService {
         return "index";
     }
 
-    public String login(UsuarioDto usuarioDto, ModelMap modelMap) {
-        System.out.println("caiu aqui");
+    public String login(UsuarioDto usuarioDto, ModelMap modelMap) throws JsonProcessingException {
         var token = new UsernamePasswordAuthenticationToken(usuarioDto.email(), usuarioDto.senha());
         var auth = authenticationManager.authenticate(token);
-        var tokenJwt = jwTtoken.criarToken((String) auth.getPrincipal());
-        System.out.println("token" + tokenJwt);
+        var tokenJwt = jwTtoken.criarToken(usuarioDto.email());
+        var json = itemsAgendamento();
+        modelMap.addAttribute("agendamentos", json);
         return "agendamentos";
     }
 
@@ -82,11 +82,5 @@ public class BarbeariaService {
                         h.getHora().toString()
                 )).toList();
         return mapper.writeValueAsString(listaDto);
-    }
-
-    public String agendamentos(ModelMap modelMap) throws JsonProcessingException {
-        var json = itemsAgendamento();
-        modelMap.addAttribute("agendamentos", json);
-        return "agendamentos";
     }
 }

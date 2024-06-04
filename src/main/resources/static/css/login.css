@@ -27,6 +27,13 @@ main{
     font-size: 2rem;
 }
 
+#error_message{
+    font-size: 2.4rem;
+    color: var(--color-chocolate);
+    text-align: center;
+    display: none;
+}
+
 .formLogin a {
     color: var(--color-chocolate);
     font-size: 2rem;
