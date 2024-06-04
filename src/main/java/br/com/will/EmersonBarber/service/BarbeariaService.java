@@ -26,6 +26,8 @@ public class BarbeariaService {
     private AgendaRepository agendaRepository;
     @Autowired
     private AuthenticationManager authenticationManager;
+    @Autowired
+    private JWTtoken jwTtoken;
      JsonMapper mapper = new JsonMapper();
 
     public String gerarData(GerarDatasDto gerarDatasDto) {
@@ -44,11 +46,12 @@ public class BarbeariaService {
         return "index";
     }
 
-    public String login(UsuarioDto usuarioDto, ModelMap modelMap) throws JsonProcessingException {
+    public String login(UsuarioDto usuarioDto, ModelMap modelMap) {
+        System.out.println("caiu aqui");
         var token = new UsernamePasswordAuthenticationToken(usuarioDto.email(), usuarioDto.senha());
         var auth = authenticationManager.authenticate(token);
-        var json = itemsAgendamento();
-        modelMap.addAttribute("agendamentos", json);
+        var tokenJwt = jwTtoken.criarToken((String) auth.getPrincipal());
+        System.out.println("token" + tokenJwt);
         return "agendamentos";
     }
 
@@ -59,7 +62,7 @@ public class BarbeariaService {
         agendaRepository.deleteById(id);
         var json = itemsAgendamento();
         modelMap.addAttribute("agendamentos", json);
-        return "agendamentos";
+        return "index";
     }
 
     private String itemsAgendamento() throws JsonProcessingException {
@@ -79,5 +82,11 @@ public class BarbeariaService {
                         h.getHora().toString()
                 )).toList();
         return mapper.writeValueAsString(listaDto);
+    }
+
+    public String agendamentos(ModelMap modelMap) throws JsonProcessingException {
+        var json = itemsAgendamento();
+        modelMap.addAttribute("agendamentos", json);
+        return "agendamentos";
     }
 }

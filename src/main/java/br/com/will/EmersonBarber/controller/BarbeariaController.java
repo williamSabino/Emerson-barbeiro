@@ -27,6 +27,11 @@ public class BarbeariaController {
     @GetMapping("/login")
     public String login(){ return "login"; }
 
+    @GetMapping("/agendamentos")
+    public String agendamentos(ModelMap modelMap) throws JsonProcessingException {
+        return service.agendamentos(modelMap);
+    }
+
 
     @PostMapping(path = "/login", consumes = "application/x-www-form-urlencoded")
     public  String loginEntrar(UsuarioDto usuarioDto, ModelMap modelMap) throws JsonProcessingException {
